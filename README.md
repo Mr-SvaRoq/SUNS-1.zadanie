@@ -35,7 +35,7 @@
 [5, 12.0, 7.078999996, 1.109706283, 1.416403651, 0.759509265, 0.58013165, 0.214613229, 0.100106589, 51100.0, 4906.0, 96.1, 100.1, 21.6, 13.6, 1.1, 8.8, 52958.0, 3.7, 11015.0, 5.1, 21.5, 73.4, 9908.0, 15322.0, -5414.0, 11.6, 19.1, 69.3, 8.6, 1.9, 81.7, 76.7, 9.3, 76.8, 2.7, 150.7, 59.8, 340.0, 1.6, 44.0, 9.3, 1.2, 7.2, 109.5, 110.1, 125.6, 120.7, 60.9, 46.6, 35.1, 53.4, 10.1]
 
 ---------STRING and REGION(2. STLPEC) DICTIONARY----------
-{'Southern Asia': 1, 'Central and Eastern Europe': 2, 'Middle East and Northern Africa': 3, '-': 0, 'Sub-Saharan Africa': 4, 'Latin America and Caribbean': 5, 'Australia and New Zealand': 6, 'Western Europe': 7, '~0.0': 0, 'Southeastern Asia': 8, 'North America': 9}
+- {'Southern Asia': 1, 'Central and Eastern Europe': 2, 'Middle East and Northern Africa': 3, '-': 0, 'Sub-Saharan Africa': 4, 'Latin America and Caribbean': 5, 'Australia and New Zealand': 6, 'Western Europe': 7, '~0.0': 0, 'Southeastern Asia': 8, 'North America': 9}
 
 ---------NORMALIZACIA VSETKYCH DAT----------
 - [[0.         0.90540541 0.23815701 ... 0.44662309 0.01825843 0.21230532]
