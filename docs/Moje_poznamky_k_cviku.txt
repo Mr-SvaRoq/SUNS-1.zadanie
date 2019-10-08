@@ -1,0 +1,69 @@
+SUNS CVIKO 2
+	- jedna krajina ma 50 parametrov -> 51D priestor, LOL
+	- Euklidovska vzdialenost, je v podtate pytagorova veta, ak sa na to pozries, sqrt[ (x-y)^2 ] -> L2 - vzdialenosti su v kniznici
+	- pouziva sa aj Manhattanska vydialenost -> iny nazov L1
+	- kosinusova metrika -> 
+		priklad: Stack oferflow
+				 Wiki o Indonezii?
+				Instagram o pohory menom Java? v Indoneze
+					- vyskoy slov 				Java a Sopka
+					Stack(2 odstavec)			4		0
+					Wiki(12 odstavec)			6		6
+					Insta(1 odstavec)			1		2
+					
+					- ak si to dam do grafu (Java/Sopka) ... a tie body ich spojim s pociatkom, vidim vzdialenost medzi nimi a tam as oplati ten uhol, tie kt. su blizsie ku sebe (uhol), tak sa podobaju
+	Normalizovanie dat
+		-	
+		či sa staty podobaju
+			SA	ŠV	POR	JOR
+		SA	-
+		ŠV	1/3	-
+		POR	0/3	2/3	-
+		JPR	2/3 0/3	0,5/3 -
+		- ak by sme dali cisla z zabulky v prezentacii, tak euklid nam nevyjde
+			- kvoli tomu, ze sqrt[ (x1-x2)^2 + (y1-y2)^2 + (z1-z2)^2 ] ..... za x davame velke cisla, za y male a z z male ... nevyjde, treba normaliyovat
+			
+		- Min-max (scaling) - najjednoduchsia (ze vraj) ... normalizacie su v knizciici
+		- Standarization - - fajn
+		- L2 - teraz nam nepomoze
+		
+		- k ulohe, treba urobit tabulku ako v prezentacii, normalizovanu
+		
+	Zhlukovanie
+		- naziaciatku, zhlukovanie/clusters, nevieme povedat naziatku, ale na zaciatku ich mame definovat? idk ci to chapem
+		- K- means algoritmus
+				- nahodne vyberie stred klasterov
+				- vyberie bod, 
+				- odmeria vzdialenost boda od klastru a priradi ich k lastru
+				- opakuje sa to (od bodu, nahodne vyberie stred klastrov), dokym sa zasekne, nevie pohnut, ci daco take
+				- https://www.naftaliharris.com/blog/visualizing-k-means-clustering/
+				Gaussian Mixture
+				- zvolit spravneho repreyentanta
+					- priklad 20 ukazovatellov 140 krajin,  -> 1x20
+				- nevyhody, v prezentacii
+		- DBSCAN algoritmus
+				- nevieme pocet klastrov dopredu
+				- https://www.naftaliharris.com/blog/visualizing-dbscan-clustering/
+				Pimpled smiley
+				
+				- pro/cons cviko prezentacii
+		
+		- Chniese whispers 
+				- navod je v prezentacii
+				- prepojime body pomocou vzdialenosti
+				cons/pros - prezentacia
+				
+		
+	nacitat data
+	prekonvertovat data na cisla int/float, ... regiony zakodovat do rovnakych cisiel
+	scallovat data (normalizacia?) -> vsetko sa asi prekonvertuje float
+	metriky
+	K-means - berie len X
+		- vyberieme na tvtdo pocet zhlukov
+	- DB-scane ... pozriey ake vzdialenosti mame <1,3> a nastavim zle epsilon .. 20.. 0.5 , som v pici, vsetko da do jedneho clustra
+					- a ak nastavim min. pocet clustra, ak mam realne 144 krajin a dam min 900 klastrov, som v pici
+					
+	python 3.6.8
+	
+	
+	
