@@ -123,15 +123,28 @@ if __name__ == '__main__':
     # transformer = Normalizer().fit(allData)
     # print(transformer.transform(allData))
 
+    with open("allDataConvert.csv", 'w', newline='') as my_csv:
+        csvWriter = csv.writer(my_csv, delimiter=',')
+        csvWriter.writerows(allData)
+
     print('\n---------NORMALIZACIA VSETKYCH DAT----------')
     scaler = MinMaxScaler()
     scaler.fit(allData)
     scaledAllData = scaler.transform(allData)
     print(scaledAllData)
 
+    with open("normal.csv", 'w', newline='') as my_csv:
+        csvWriter = csv.writer(my_csv, delimiter=',')
+        csvWriter.writerows(scaledAllData)
+
     print('\n---------EUKLIDOVA VZDIALENOST----------')
     euclideanAllData = euclidean_distances(scaledAllData, scaledAllData)
     print(euclideanAllData)
+    with open("euclideanAllData.csv", 'w', newline='') as my_csv:
+        csvWriter = csv.writer(my_csv, delimiter=',')
+        # for row in euclideanAllData:
+            # csvWriter.writerow(row)
+        csvWriter.writerows(euclideanAllData)
     # overenie normalizacie ?
     # index = 3
     # print(countryDictionary[index])
