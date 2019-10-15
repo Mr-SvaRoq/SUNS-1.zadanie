@@ -69,6 +69,7 @@ from sklearn.preprocessing import Normalizer
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics.pairwise import euclidean_distances
 from sklearn.cluster import KMeans
+from sklearn.cluster import DBSCAN
 
 if __name__ == '__main__':
     allData = []
@@ -93,10 +94,6 @@ if __name__ == '__main__':
                     counter += 1
                     if counter == 10 or counter == 0:
                         continue
-                    # if len(newLineOfArray) == 0:
-                    #     newLineOfArray.append(0)
-                    #     countryDictionary.append(x)
-                    #     continue
                     try:
                         floatValue = float(x)
                         newLineOfArray.append(floatValue)
@@ -159,5 +156,10 @@ if __name__ == '__main__':
     #     counter +=1
     # print(kmeans.cluster_centers_)
 
+    print('\n---------DB SCAN----------')
+    dbscan = DBSCAN(eps=3, min_samples=3).fit(euclideanAllData)
+    print(dbscan.labels_)
 
 
+# https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html
+# https://scikit-learn.org/stable/datasets/index.html
