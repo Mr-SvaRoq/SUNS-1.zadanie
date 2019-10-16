@@ -65,7 +65,6 @@
 
 import csv
 import numpy as np
-from sklearn.preprocessing import Normalizer
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics.pairwise import euclidean_distances
 from sklearn.cluster import KMeans
@@ -82,7 +81,7 @@ if __name__ == '__main__':
         csv_reader = csv.reader(csv_file, delimiter=',')
         line_count = 0
         for row in csv_reader:
-            # how many rows do you want
+            # how many rows do you want //prvych 30 krajin
             if line_count == 31:
                 break
             if line_count == 0:
@@ -148,8 +147,12 @@ if __name__ == '__main__':
     # print(scaledAllData[index])
 
     print('\n---------K MEANS----------')
-    kmeans = KMeans(n_clusters=20, random_state=0).fit(euclideanAllData)
+    kmeans = KMeans(n_clusters=5).fit(scaledAllData)
+    #kolko chcem skupin/klastrov
+    set(kmeans.labels_)
     print(kmeans.labels_)
+    print(set(kmeans.labels_))
+
     # counter = 0
     # for k in kmeans.labels_:
     #     print(counter)
@@ -157,8 +160,9 @@ if __name__ == '__main__':
     # print(kmeans.cluster_centers_)
 
     print('\n---------DB SCAN----------')
-    dbscan = DBSCAN(eps=3, min_samples=3).fit(euclideanAllData)
+    dbscan = DBSCAN(eps=1.5, min_samples=2).fit(scaledAllData)
     print(dbscan.labels_)
+    print(set(dbscan.labels_))
 
 
 # https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html
